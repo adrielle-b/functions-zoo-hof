@@ -24,7 +24,7 @@ describe('Testes da função HandlerElephants', () => {
     expect(handlerElephants(1)).toBe('Parâmetro inválido, é necessário uma string');
   });
 
-  it('Verifica a id da espécie elefante.', () => {
+  it('Verifica a id da espécie elefante e se outros parâmetros não tratados retorna null.', () => {
     expect(handlerElephants('id')).toBe('bb2a76d8-5fe3-4d03-84b7-dba9cfc048b5');
     expect(handlerElephants('sex')).toEqual(null);
     expect(handlerElephants('age')).toEqual(null);
