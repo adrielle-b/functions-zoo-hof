@@ -7,7 +7,7 @@ const todosAnimais = () => {
   return qtdAnimais;
 };
 
-const qtdAnimalParamentro = (animal) => {
+const qtdAnimalParametro = (animal) => {
   const qtdAnimal = data.species
     .find((elemento) => elemento.name === animal.species).residents.length;
   return qtdAnimal;
@@ -23,7 +23,7 @@ const countAnimals = (animal) => {
     return todosAnimais();
   }
   if (Object.values(animal).length === 1) {
-    return qtdAnimalParamentro(animal);
+    return qtdAnimalParametro(animal);
   }
   return qtdAnimalGenero(animal);
 };
