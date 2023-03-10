@@ -4,7 +4,7 @@ describe('Testes da função HandlerElephants', () => {
   it('Verifica a quantidade de elefantes, seus nomes, a média de suas idades e sua localização.', () => {
     expect(handlerElephants('count')).toBe(4);
     expect(handlerElephants('names')).toEqual(['Ilana', 'Orval', 'Bea', 'Jefferson']);
-    expect(handlerElephants('avarageAge')).toEqual(null);
+    expect(handlerElephants('averageAge')).toEqual(10.5);
     expect(handlerElephants('location')).toBe('NW');
   });
 
@@ -24,9 +24,13 @@ describe('Testes da função HandlerElephants', () => {
     expect(handlerElephants(1)).toBe('Parâmetro inválido, é necessário uma string');
   });
 
-  it('Verifica a id da espécie elefante e se outro parâmetro retorna null.', () => {
+  it('Verifica a id da espécie elefante.', () => {
     expect(handlerElephants('id')).toBe('bb2a76d8-5fe3-4d03-84b7-dba9cfc048b5');
     expect(handlerElephants('sex')).toEqual(null);
     expect(handlerElephants('age')).toEqual(null);
+  });
+
+  it('Verifica se é função', () => {
+    expect(typeof handlerElephants).toBe('function');
   });
 });
